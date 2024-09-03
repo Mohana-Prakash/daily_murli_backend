@@ -8,6 +8,10 @@ const PORT = 5000;
 
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Node.js backend!");
+});
+
 app.get("/fetch-murli/:pathValue", async (req, res) => {
   try {
     const date = req.params.pathValue;
